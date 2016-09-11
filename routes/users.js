@@ -7,51 +7,6 @@ function UsersHandler(db){
     var users = new UsersDAO(db);
     var rp = new Response();
 
-    /*bcrypt.compare(params.current, r.password, function (err, res) {
-                if (err) {
-                    return p.send(
-                        {
-                            success: false,
-                            message: "Password incorrect."
-                        }
-                    );
-                }
-
-                bcrypt.hash(params.new, null, null, function (err, hash) {
-                    if (err) {
-                        return p.send(
-                            {
-                                success: false,
-                                message: "Hashing error."
-                            }
-                        );
-                    }
-
-                    var obj = {
-                        _id: params._id,
-                        password: hash
-                    }
-
-                    users.changePassword(obj, function (err, res) {
-                        if (err) {
-                            return p.send(
-                                {
-                                    success: false,
-                                    message: "Password update failed."
-                                }
-                            );
-                        }
-
-                        return p.send({
-                            success: true,
-                            message: "Password updated successfully."
-                        });
-                    });
-
-                });
-
-            });*/
-
     this.create = function(q, p, n){
         var obj = q.body.user;
 
